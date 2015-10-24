@@ -1,5 +1,5 @@
-<div class="brand">Crime Map TW</div>
-<div class="subtitle">Help you keep away from danger.</div>
+<div class="brand">Mapper</div>
+<div class="subtitle">Visualize your data to fancy maps.</div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-default" id="navbar-default" role="navigation">
@@ -13,13 +13,16 @@
                 <span class="icon-bar"></span>
             </button>
             <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-            <a class="navbar-brand" href="index.html">Crime Map TW</a>
+            <a class="navbar-brand" href="index.html">Mapper</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav" id="nav">
                 <li>
-                    <%= link_to("Crime Map TW", root_path) %>
+                    <%= link_to("Home", root_path) %>
+                </li>
+                <li>
+                    <%= link_to("Maps", "showmap") %>
                 </li>
                 <li>
                     <a href="#">Build Your Map</a>

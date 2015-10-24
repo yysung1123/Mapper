@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources "maps"
   resources "demo"
   get '/about' => 'welcome#about'
+  get '/showmap' => 'welcome#showmap'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

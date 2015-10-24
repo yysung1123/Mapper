@@ -1,8 +1,11 @@
 class WelcomeController < ApplicationController
 	def index
-		@maps = Map.all
 	end
 
 	def about
+	end
+
+	def showmap
+		@maps = Map.all
 	end
 end
