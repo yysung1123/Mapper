@@ -4,16 +4,22 @@
         <div class="box">
         	<div class="col-lg-4 list-group">
 
-				<a href="#" class="list-group-item active">台灣犯罪事件發生地圖</a>
-				<a href="#" class="list-group-item">地圖二</a>
-				<a href="#" class="list-group-item">地圖三</a>
-				<a href="#" class="list-group-item">這是地圖四</a>
+				<ul class="nav nav-pills nav-stacked list-group">
+				    <% @maps.each do |m| %>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				    <% end %>
+			    </ul>
+
 			</div>
 
-            <div class="col-lg-8 text-center">
-            	
-		        <h1>台灣犯罪事件發生地圖</h1>
-				<div class="map" style="margin: auto;"></div> 
+            <div class="col-lg-8 text-center tab-content">
+
+				<% @maps.each do |m| %>
+			        <div id="<%= m.title %>" class="tab-pane fade">
+				        <h1><%= m.title %></h1>
+				        <div class="map" style="margin: auto;"></div> 
+				    </div>
+		        <% end %>			
 
             </div>
         </div>
@@ -41,4 +47,7 @@ $('.map').tinyMap({
     ]
     });
 
+$(document).ready(function () {
+  $('.nav-pills a:first').tab('show')
+});
 </script>

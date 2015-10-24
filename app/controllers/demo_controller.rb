@@ -14,7 +14,7 @@ class DemoController < ApplicationController
         @map.data.build(:lat => location['lat'], :lng => location['lng'], :label => d[3])
       end
       i += 1
-      if i == 900
+      if i == 80
         break
       end
     end
