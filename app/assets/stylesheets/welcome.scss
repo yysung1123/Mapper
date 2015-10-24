@@ -3,8 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .map {
-    width: 900px;
-    height: 650px;
+    width: 90%;
+    height: 40em;
 }
 
 /*!
@@ -57,7 +57,7 @@ hr {
 }
 
 .navbar-nav {
-    /*text-transform: uppercase;*/
+    text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 3px;
 }
@@ -157,7 +157,7 @@ footer p {
         color: #fff;
     }
 
-    .navbar {
+    #navbar-default {
         border-radius: 0;
     }
 
@@ -165,25 +165,25 @@ footer p {
         display: none;
     }
 
-    .navbar {
+    #navbar-default {
         min-height: 0;
     }
 
-    .navbar-default {
+    #navbar-default {
         border: none;
         background: #fff;
         background: rgba(255,255,255,0.9);
     }
 
-    .nav>li>a {
+    #nav>li>a {
         padding: 35px;
     }
 
-    .navbar-nav>li>a {
+    #nav>li>a {
         line-height: normal;
     }
 
-    .navbar-nav {
+    #nav {
         display: table;
         float: none;
         margin: 0 auto;
