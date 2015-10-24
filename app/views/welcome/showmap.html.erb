@@ -32,12 +32,13 @@
 <script>
 // Javascript
 
-$('.map').tinyMap({
+<% @maps.each do |m| %>
+    $('#<%= m.title %> .map').tinyMap({
     'center': '台北市信義區台北101',
     'zoom'  : 14,
      'marker': [
          <% i = 0 %>
-        <% Map.last.data.each do |data| %>
+        <% m.data.each do |data| %>
             {
             'addr': ['<%= data.lat %>', '<%= data.lng %>'],
             'text': '<strong><%= data.label %></strong>',
@@ -46,6 +47,8 @@ $('.map').tinyMap({
         <% end %>
     ]
     });
+<% end %>
+
 
 $(document).ready(function () {
   $('.nav-pills a:first').tab('show')
