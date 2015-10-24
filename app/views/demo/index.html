@@ -1,6 +1,9 @@
-<%= link_to 'Generate Map', new_demo_path %>
-<div class="map"></div>
-
+<div class="container">
+    <div class="box">
+    <h1><%= link_to 'Generate Map', new_demo_path %></h1>
+    <div class="map"></div>
+    </div>
+</div>
 <script>
 // Javascript
 
@@ -8,13 +11,14 @@ $('.map').tinyMap({
     'center': '台北市信義區台北101',
     'zoom'  : 14,
      'marker': [
-         <% i = 0 %>
+        <% if not Map.all.empty? %>
         <% Map.first.data.each do |data| %>
             {
             'addr': ['<%= data.lat %>', '<%= data.lng %>'],
             'text': '<strong><%= data.label %></strong>',
             'animation': 'DROP'
         },
+        <% end %>
         <% end %>
     ]
     });
