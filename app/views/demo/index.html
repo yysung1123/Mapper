@@ -1,5 +1,4 @@
-<h1>OUR MAP SHOULD BE HERE!</h1>
-
+<%= link_to 'Generate Map', new_demo_path %>
 <div class="map"></div>
 
 <script>
@@ -10,7 +9,7 @@ $('.map').tinyMap({
     'zoom'  : 14,
      'marker': [
          <% i = 0 %>
-        <% Map.last.data.each do |data| %>
+        <% Map.first.data.each do |data| %>
             {
             'addr': ['<%= data.lat %>', '<%= data.lng %>'],
             'text': '<strong><%= data.label %></strong>',
@@ -21,5 +20,3 @@ $('.map').tinyMap({
     });
 
 </script>
-
-
