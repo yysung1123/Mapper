@@ -1,3 +1,16 @@
 // Place all the styles related to the maps controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.circle{
+	width:180px;
+	height:180px;
+	border-radius:90px;
+	font-size:70px;
+	color:#000;
+	line-height:180px;
+	text-align:center;
+	background:#ddd
+}

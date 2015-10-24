@@ -1,30 +1,45 @@
 <div class="container">
-
-    <div class="row">
-        <div class="box">
-        	<div class="col-lg-4 list-group">
-
+    <div class="box row">
+    	<div class="col-md-4">
+            <div id="custom-search-input">
+	            <div class="input-group col-md-12">
+	                <input type="text" class="form-control input-lg" placeholder="搜尋地圖..." />
+	                <span class="input-group-btn">
+	                    <button class="btn btn-info btn-lg" type="button">
+	                        <i class="glyphicon glyphicon-search"></i>
+	                    </button>
+	                </span>
+	            </div>
+            </div>
+            <div style="overflow-y: scroll; height: 36em">
 				<ul class="nav nav-pills nav-stacked list-group">
 				    <% @maps.each do |m| %>
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
 				    <% end %>
 			    </ul>
-
 			</div>
+		</div>
 
-            <div class="col-lg-8 text-center tab-content">
+        <div class="col-md-8 text-center tab-content">
 
-				<% @maps.each do |m| %>
-			        <div id="<%= m.title %>" class="tab-pane fade">
-				        <h1><%= m.title %></h1>
-				        <div class="map" style="margin: auto;"></div> 
-				    </div>
-		        <% end %>			
+			<% @maps.each do |m| %>
+		        <div id="<%= m.title %>" class="tab-pane fade">
+			        <h1><%= m.title %></h1>
+			        <div class="map" style="margin: auto;"></div> 
+			    </div>
+	        <% end %>			
 
-            </div>
         </div>
     </div>
-
 </div>
 <!-- /.container -->
 
