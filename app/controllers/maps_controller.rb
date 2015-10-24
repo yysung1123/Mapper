@@ -3,6 +3,9 @@ require 'CSV'
 class MapsController < ApplicationController
   def new
     @map = Map.new
+  end
+  def new
+    @map = Map.new
     a = CSV.read('public/wheee.csv')
     i = 0
     a.each do |d|
