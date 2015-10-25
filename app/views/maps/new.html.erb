@@ -7,7 +7,7 @@
 						<span class="input-group-addon">標題</span>
 						<%= f.text_field :title, :class => 'form-control', :placeholder => 'Title' %>
 					</div><br>
-					<%= f.file_field :attachment, :class => 'filestyle', :'data-placeholder' => 'No file', :'data-buttonName' => 'btn btn-primary', :'data-buttonText' => '瀏覽檔案' %>
+					<%= f.file_field :attachment, :id => "file",:class => 'filestyle', :'data-placeholder' => 'No file', :'data-buttonName' => 'btn btn-primary', :'data-buttonText' => '瀏覽檔案' %>
 					<br>
 					<div class="btn-group btn-group-justified">
 						<div class="btn-group">
@@ -36,7 +36,6 @@
 $(document).ready(function () {
 
   $("#file").filestyle({buttonText: "瀏覽檔案", buttonName: "btn-primary", placeholder: "No file"});
-  // $("#file").filestyle({buttonName: "btn-primary"});
 
 });
 </script>
