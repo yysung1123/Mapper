@@ -11,7 +11,7 @@
 	                </span>
 	            </div>
             </div>
-            <div style="overflow-y: scroll; height: 36em">
+            <div style="overflow-y: scroll; height: 40em">
 				<ul class="nav nav-pills nav-stacked list-group">
 				    <% @maps.each do |m| %>
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
@@ -24,7 +24,7 @@
         <div class="col-md-8 text-center container">
 
 			<% @maps.each do |m| %>
-		        <div id="<%= m.title %>" class="tab-pane fade">
+		        <div id="<%= m.title %>" style="position: absolute; width: 95%" class="tab-pane fade">
 			        <h1><%= m.title %></h1>
 			        <div class="map" style="margin: auto;"></div><br>
 			        <div style="text-align: left; font-size: 16px">
