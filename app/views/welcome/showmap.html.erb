@@ -26,7 +26,11 @@
 			<% @maps.each do |m| %>
 		        <div id="<%= m.title %>" class="tab-pane fade">
 			        <h1><%= m.title %></h1>
-			        <div class="map" style="margin: auto;"></div>
+			        <div class="map" style="margin: auto;"></div><br>
+			        <div style="text-align: left; font-size: 16px">
+			        	<span><i class="glyphicon glyphicon-time"> </i> <%= m.created_at %></span>
+			        	<span style="position: absolute; right: 1.5em"><i class="glyphicon glyphicon-map-marker"> </i> <%= m.data.count() %></span>
+			        </div>
 			    </div>
 	        <% end %>
 
