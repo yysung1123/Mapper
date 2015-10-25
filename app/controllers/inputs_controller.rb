@@ -1,3 +1,6 @@
+require 'json'
+require 'csv'
+
 class InputsController < ApplicationController
   def create
     begin
