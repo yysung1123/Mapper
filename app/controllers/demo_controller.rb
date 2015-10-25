@@ -1,4 +1,4 @@
-require 'CSV'
+require 'csv'
 class DemoController < ApplicationController
     def index
     end
