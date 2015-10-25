@@ -23,8 +23,16 @@ class WelcomeController < ApplicationController
           e = d['HB_URL'].partition('TODC')[2]
           a = CSV.read('/public' + e)
           i = 0
+          j = 0
+          flag = 0
           a[0].each do |f|
-            if ['Address', '地址'].include?(f)
+            ["Addr", "地址"].each do |str|
+              if f.include? str
+                flag = 1
+                break
+              end
+            end
+            if flag == 1
               break
             end
             i += 1
@@ -52,4 +60,5 @@ class WelcomeController < ApplicationController
       @map.save
     rescue
   end
+end
 end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources "maps"
   resources "demo"
+  resources "inputs"
   get '/about' => 'welcome#about', :as => "about_us"
   get '/showmap' => 'welcome#showmap', :as => "showmap"
 

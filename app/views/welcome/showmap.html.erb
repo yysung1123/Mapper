@@ -15,6 +15,7 @@
 				<ul class="nav nav-pills nav-stacked list-group">
 				    <% @maps.each do |m| %>
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <!--<li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
@@ -22,8 +23,7 @@
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
+				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>-->
 				    <% end %>
 			    </ul>
 			</div>
@@ -34,9 +34,9 @@
 			<% @maps.each do |m| %>
 		        <div id="<%= m.title %>" class="tab-pane fade">
 			        <h1><%= m.title %></h1>
-			        <div class="map" style="margin: auto;"></div> 
+			        <div class="map" style="margin: auto;"></div>
 			    </div>
-	        <% end %>			
+	        <% end %>
 
         </div>
     </div>

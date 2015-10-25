@@ -9,8 +9,15 @@ class DemoController < ApplicationController
     a = CSV.read('public/wheee.csv')
     i = 0
     j = 0
+    flag = 0
     a[0].each do |f|
-      if ['Address', '地址'].include?(f)
+      ["Addr", "地址"].each do |str|
+        if f.include? str
+          flag = 1
+          break
+        end
+      end
+      if flag == 1
         break
       end
       i += 1
