@@ -15,24 +15,16 @@
 				<ul class="nav nav-pills nav-stacked list-group">
 				    <% @maps.each do |m| %>
 				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <!--<li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>
-				        <li><a class="list-group-item" data-toggle="tab" href="#<%= m.title %>"><%= m.title %></a></li>-->
+				        
 				    <% end %>
 			    </ul>
 			</div>
 		</div>
 
-        <div class="col-md-8 text-center tab-content">
+        <div class="col-md-8 text-center container">
 
 			<% @maps.each do |m| %>
-		        <div id="<%= m.title %>" class="tab-pane fade">
+		        <div id="<%= m.title %>" class="tab-pane fade col-md-6">
 			        <h1><%= m.title %></h1>
 			        <div class="map" style="margin: auto;"></div>
 			    </div>

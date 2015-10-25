@@ -54,7 +54,7 @@ class InputsController < ApplicationController
       @map.save
     rescue
     end
-    redirect_to root_path
+    redirect_to showmap_path
   end
 
   private
